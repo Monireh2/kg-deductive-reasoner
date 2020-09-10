@@ -1,0 +1,9 @@
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+*.pyc
+__pycache__/
+data/
+.idea
