@@ -22,19 +22,28 @@ def init(data_dir, model_file):
     memn2n.load_model()
 
     # Read test data
-    print("Reading test data from %s ..." % memn2n.data_dir)
+    print("Reading test data from %s_test.txt ..." % memn2n.data_dir)
     test_data_path = glob.glob('%s_test.txt' % memn2n.data_dir)
     '''test_story, test_questions, test_qstory = \
         parse_kg_task(test_data_path, memn2n.general_config.dictionary, False)'''
-    dictionary = {"nil": 0, "yes": 1, "no": 2}
+
+    dictionary = dict((ix, w) for w, ix in memn2n.reversed_dict.items())
     lines_test_data, dictionary = load_all_data(test_data_path, dictionary)
+    # print(dictionary)
     test_start = 0
-    while test_start != -1:
+    '''while test_start != -1:
         lines_test_data = lines_test_data[test_start:]
 
         test_gen = generate_next_story(lines_test_data, dictionary)
-        test_story, test_questions, test_qstory, test_start = next(test_gen)
+        test_story, test_questions, test_qstory, test_start = next(test_gen)'''
+    if test_start != -1:
+        lines_test_data = lines_test_data[test_start:]
 
+        test_gen = generate_next_story(lines_test_data, dictionary)
+        # print(test_gen)
+        test_story, test_questions, test_qstory, test_start = next(test_gen)
+        # for i in range(1000):
+        #     print(test_story[:4,i,0])
 
 def run():
     app.run()
@@ -48,8 +57,12 @@ def index():
 @app.route('/get/story', methods=['GET'])
 def get_story():
     question_idx      = np.random.randint(test_questions.shape[1])
-    story_idx         = test_questions[0, question_idx]
+    #story_idx         = test_questions[0, question_idx]
+    story_idx = 0
     last_sentence_idx = test_questions[1, question_idx]
+
+
+
 
     story_txt, question_txt, correct_answer = memn2n.get_story_texts(test_story, test_questions, test_qstory,
                                                                      question_idx, story_idx, last_sentence_idx)

@@ -275,7 +275,7 @@ def parse_kg_task(data_files, dictionary, include_question):
                     if include_question:
                         sentence_idx += 1'''
 
-                if words[-1]!='yes' and words[-1]!='no':
+                if words[-1] != 'yes' and words[-1] != 'no':
                     is_question = False
                     sentence_idx += 1
                 else:

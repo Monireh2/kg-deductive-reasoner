@@ -4,6 +4,10 @@
 .Trash-*
 .nfs*
 *.pyc
+temp.txt
 __pycache__/
 data/
+<<<<<<< HEAD
 .idea
+=======
+>>>>>>> b8c29558af025ac62f72cf031d71abbb310360bd

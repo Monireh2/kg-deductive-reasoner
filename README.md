@@ -1,9 +1,17 @@
 ## End-To-End Memory Networks for Deductive Reasoning over Knowledge Graph
+<<<<<<< HEAD
 This is a modification of implementation of [MemN2N model in Python](https://github.com/vinhkhuc/MemN2N-babi-python) for the [Deductive Reasoning over Knowledge Graph]
 as inspired by the Section 4 of the paper "[End-To-End Memory Networks](http://arxiv.org/abs/1503.08895)". It is based on
 Facebook's [Matlab code](https://github.com/facebook/MemNN/tree/master/MemN2N-babi-matlab).
 
 ![Web-based Demo](Coming soon!)
+=======
+This is a modification of implementation of [MemN2N model in Python](https://github.com/vinhkhuc/MemN2N-babi-python) for the [Deductive Reasoning over Knowledge Graph](https://arxiv.org/abs/1811.04132v1)
+as inspired by the Section 4 of the paper "[End-To-End Memory Networks](http://arxiv.org/abs/1503.08895)". It is based on
+Facebook's [Matlab code](https://github.com/facebook/MemNN/tree/master/MemN2N-babi-matlab).
+
+[Web-based Demo](Coming soon!)
+>>>>>>> b8c29558af025ac62f72cf031d71abbb310360bd
 
 ## Requirements
 * Python 2.7
@@ -13,7 +21,10 @@ $ sudo pip install -r requirements.txt
 ```
 * [Sample KG Dataset](https://drive.google.com/file/d/1qwyiGlxyxrRBV7FoZrHAFe_girUZrBxY/view?usp=sharing) should be downloaded and decompressed to `data`:
 ```
+<<<<<<< HEAD
 $ mkdir data
+=======
+>>>>>>> b8c29558af025ac62f72cf031d71abbb310360bd
 $ tar xvf sample_data_normalized.tar.xz -C data
 
 ```

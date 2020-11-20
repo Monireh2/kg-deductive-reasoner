@@ -71,13 +71,14 @@ def run_test_task(data_dir, task_name, model_file):
     """
     print("testing for task %s ..." % task_name)
 
-    test_files=glob.glob('%s_test.txt' % data_dir)
-
-    dictionary = {"nil": 0, "yes": 1, "no": 2}
-    lines_test_data, dictionary = load_all_data(test_files, dictionary)
+    test_files = glob.glob('%s_test.txt' % data_dir)
     reversed_dict, model, memory, loss, general_config = load_model(model_file)
     # Get the whole dictionary
     dictionary = dict((ix, w) for w, ix in reversed_dict.items())
+
+    # dictionary = {"nil": 0, "yes": 1, "no": 2}
+    lines_test_data, dictionary = load_all_data(test_files, dictionary)
+
     # Testing
     test_wrapper(lines_test_data, dictionary, memory, model, loss, general_config)
 

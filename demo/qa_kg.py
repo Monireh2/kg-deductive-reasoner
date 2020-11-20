@@ -1,5 +1,5 @@
 """
-Demo of using Memory Network for question answering
+Demo of using Memory Network for KG reasoning
 """
 import glob
 import os
@@ -49,6 +49,8 @@ class MemN2N(object):
         story = [[self.reversed_dict[test_story[word_pos, sent_idx, story_idx]]
                   for word_pos in range(max_words)]
                  for sent_idx in range(last_sentence_idx + 1)]
+        print(story)
+
 
         question = [self.reversed_dict[test_qstory[word_pos, question_idx]]
                     for word_pos in range(max_words)]
@@ -56,7 +58,7 @@ class MemN2N(object):
         story_txt = [" ".join([w for w in sent if w != "nil"]) for sent in story]
         question_txt = " ".join([w for w in question if w != "nil"])
         correct_answer = self.reversed_dict[test_questions[2, question_idx]]
-
+        print(story_txt)
         return story_txt, question_txt, correct_answer
 
     def predict_answer(self, test_story, test_questions, test_qstory,
