@@ -22,8 +22,9 @@ test_file = open('./data/'+task_name+'_normalized/'+task_name+'_normalized_test.
 test_original_file = open('./new_data/'+task_name+'_original/'+task_name+'_original_test.txt', 'w')
 train_file_list = open('./new_data/'+task_name+'_original/'+task_name+'_train_file_list.txt', 'w')
 test_file_list = open('./new_data/'+task_name+'_original/'+task_name+'_original_test_file_list.txt', 'w')
+
 # The directory to input files in the json format
-json_files = glob.glob("./data/kg_reasoner/json-linked-data-benchmarks-usable/*.json")
+json_files = glob.glob("./data/sample_json_files/*.json")
 
 n_kgs = len(json_files)
 n_kgs_train = int(n_kgs * 0.9)

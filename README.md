@@ -19,13 +19,20 @@ Facebook's [Matlab code](https://github.com/facebook/MemNN/tree/master/MemN2N-ba
 ```
 $ sudo pip install -r requirements.txt
 ```
-* [Sample KG Dataset](https://drive.google.com/file/d/1qwyiGlxyxrRBV7FoZrHAFe_girUZrBxY/view?usp=sharing) should be downloaded and decompressed to `data`:
+* [Sample Normalized KG Dataset](https://drive.google.com/file/d/1qwyiGlxyxrRBV7FoZrHAFe_girUZrBxY/view?usp=sharing) should be downloaded and decompressed to `data`:
 ```
 
 $ mkdir data
 =======
 
 $ tar xvf sample_data_normalized.tar.xz -C data
+
+```
+* [Sample Json Format Dataset](https://drive.google.com/file/d/1Wc50ul4xIrvGAI9HqlFjVS95CgjPXejJ/view?usp=sharing) should be downloaded and decompressed to data in case you want to run the normalization:
+```
+
+$ tar xvf sample_json_files.tar.xz -C data
+python json_reader_normalizer.py
 
 ```
 ## Usage
