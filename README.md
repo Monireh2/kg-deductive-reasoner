@@ -1,11 +1,5 @@
 ## End-To-End Memory Networks for Deductive Reasoning over Knowledge Graph
 
-This is a modification of implementation of [MemN2N model in Python](https://github.com/vinhkhuc/MemN2N-babi-python) for the [Deductive Reasoning over Knowledge Graph]
-as inspired by the Section 4 of the paper "[End-To-End Memory Networks](http://arxiv.org/abs/1503.08895)". It is based on
-Facebook's [Matlab code](https://github.com/facebook/MemNN/tree/master/MemN2N-babi-matlab).
-
-![Web-based Demo](Coming soon!)
-=======
 This is a modification of implementation of [MemN2N model in Python](https://github.com/vinhkhuc/MemN2N-babi-python) for the [Deductive Reasoning over Knowledge Graph](https://arxiv.org/abs/1811.04132v1)
 as inspired by the Section 4 of the paper "[End-To-End Memory Networks](http://arxiv.org/abs/1503.08895)". It is based on
 Facebook's [Matlab code](https://github.com/facebook/MemNN/tree/master/MemN2N-babi-matlab).
